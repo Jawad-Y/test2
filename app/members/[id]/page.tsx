@@ -8,6 +8,15 @@ import { Button } from "@/components/ui/button"
 import { ArrowLeft, Download } from "lucide-react"
 import Link from "next/link"
 
+export function generateStaticParams() {
+  // Generate static paths for known members
+  return [
+    { id: '1' },
+    { id: '2' },
+    { id: '3' },
+  ]
+}
+
 export default function MemberProfilePage({ params }: { params: { id: string } }) {
   const { user, isLoading } = useAuth()
   const [memberData] = useState({

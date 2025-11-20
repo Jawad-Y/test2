@@ -8,6 +8,15 @@ import { Button } from "@/components/ui/button"
 import { ArrowLeft, Clock, Users, BookOpen, CheckCircle } from "lucide-react"
 import Link from "next/link"
 
+export function generateStaticParams() {
+  // Generate static paths for known classes
+  return [
+    { id: '1' },
+    { id: '2' },
+    { id: '3' },
+  ]
+}
+
 interface Session {
   id: string
   date: string

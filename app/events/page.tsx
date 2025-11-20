@@ -177,7 +177,7 @@ export default function EventsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {events.map((event) => {
               const isRegistered = userRegisteredEvents.includes(event.id)
-              const isFull = event.maxAttendees && event.attendees.length >= event.maxAttendees
+              const isFull = !!(event.maxAttendees && event.attendees.length >= event.maxAttendees)
               const eventDate = new Date(event.date)
               const isUpcoming = eventDate > new Date()
 

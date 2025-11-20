@@ -116,7 +116,7 @@ export default function ClassDetailPage({ params }: { params: { id: string } }) 
         date: newSession.date,
         time: newSession.time,
         topic: newSession.topic,
-        trainer: user?.name || "Trainer",
+        trainer: user?.fullName || "Trainer",
         location: newSession.location || "TBD",
         homework: [],
       },
